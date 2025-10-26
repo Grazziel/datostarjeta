@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Payment form example - Bootstrap</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+  <div class="container py-5">
+    <div class="card shadow-sm">
+      <div class="card-header bg-white">
+        <h3 class="mb-0">Formulario para el pago</h3>
+      </div>
+
+      <div class="card-body">
+        <div class="alert alert-danger" role="alert">
+          Algo ha ido mal, revisa el formulario e inténtalo de nuevo.
+        </div>
+
+        <form>
+          <div class="row mb-3">
+            <div class="col-md-6 mb-2">
+              <label class="form-label">Número de tarjeta</label>
+              <input type="text" class="form-control" placeholder="XXXXXXXXXXXXXXXX" aria-label="Card number">
+            </div>
+
+            <div class="col-md-3 mb-2">
+              <label class="form-label">CVC #</label>
+              <input type="text" class="form-control" placeholder="0000" aria-label="CVC">
+            </div>
+
+            <div class="col-md-3 mb-2">
+              <label class="form-label">Importe</label>
+              <div class="input-group">
+                <span class="input-group-text">€</span>
+                <input type="text" class="form-control" placeholder="Importe" aria-label="Importe">
+              </div>
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <div class="col-md-6 mb-2">
+              <label class="form-label">Nombre</label>
+              <input type="text" class="form-control" placeholder="">
+            </div>
+            <div class="col-md-6 mb-2">
+              <label class="form-label">Apellido</label>
+              <input type="text" class="form-control" placeholder="">
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <div class="col-md-6 mb-2">
+              <label class="form-label">Ciudad</label>
+              <input type="text" class="form-control" placeholder="">
+            </div>
+
+            <div class="col-md-3 mb-2">
+              <label class="form-label">Estado</label>
+              <select class="form-select" aria-label="State">
+                <option selected>Selecciona un estado</option>
+                <option value="1">Barcelona</option>
+                <option value="2">Madrid</option>
+                <option value="3">Sevilla</option>
+              </select>
+            </div>
+
+            <div class="col-md-3 mb-2">
+              <label class="form-label">Código Postal</label>
+              <input type="text" class="form-control" placeholder="">
+            </div>
+          </div>
+
+          <div class="row mb-4">
+            <div class="col-md-6">
+              <label class="form-label d-block mb-2">Aceptamos:</label>
+
+              <div class="d-flex flex-wrap gap-3">
+                <div class="form-check form-check-inline d-flex align-items-center">
+                  <input class="form-check-input me-2" type="radio" name="paymentMethod" id="cardVisa">
+                  <label class="form-check-label d-flex align-items-center gap-2" for="cardVisa">
+                    <span class="p-2 rounded-3 bg-white border d-inline-flex align-items-center justify-content-center">
+                      <i class="bi bi-credit-card-2-front"></i>
+                    </span>
+                    Visa
+                  </label>
+                </div>
+
+                <div class="form-check form-check-inline d-flex align-items-center">
+                  <input class="form-check-input me-2" type="radio" name="paymentMethod" id="cardMastercard" checked>
+                  <label class="form-check-label d-flex align-items-center gap-2" for="cardMastercard">
+                    <span class="p-2 rounded-3 bg-white border d-inline-flex align-items-center justify-content-center">
+                      <i class="bi bi-credit-card"></i>
+                    </span>
+                    Mastercard
+                  </label>
+                </div>
+
+                <div class="form-check form-check-inline d-flex align-items-center">
+                  <input class="form-check-input me-2" type="radio" name="paymentMethod" id="cardPaypal">
+                  <label class="form-check-label d-flex align-items-center gap-2" for="cardPaypal">
+                    <span class="p-2 rounded-3 bg-white border d-inline-flex align-items-center justify-content-center">
+                      <i class="bi bi-paypal"></i>
+                    </span>
+                    PayPal
+                  </label>
+                </div>
+
+                <div class="form-check form-check-inline d-flex align-items-center">
+                  <input class="form-check-input me-2" type="radio" name="paymentMethod" id="cardAmex">
+                  <label class="form-check-label d-flex align-items-center gap-2" for="cardAmex">
+                    <span class="p-2 rounded-3 bg-white border d-inline-flex align-items-center justify-content-center">
+                      <i class="bi bi-credit-card-2-back"></i>
+                    </span>
+                    American Express
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <label class="form-label">Mensaje</label>
+              <textarea class="form-control" rows="4" placeholder=""></textarea>
+              <div class="form-text">Agrega cualquier nota aquí.</div>
+            </div>
+          </div>
+
+        </form>
+      </div>
+
+      <div class="card-footer bg-light d-flex justify-content-end">
+        <button type="button" class="btn btn-secondary me-2">Cancelar</button>
+        <button type="button" class="btn btn-primary">Enviar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
