@@ -6,7 +6,9 @@
   <title>Payment form example - Bootstrap</title>
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">   <!-- Para los iconos de Visa, Mastercard vamos a utilizar Font Awesome -->
+
+
 </head>
 <body class="bg-light">
   <div class="container py-5">
@@ -78,45 +80,26 @@
             <div class="col-md-6">
               <label class="form-label d-block mb-2">Aceptamos:</label>
 
-              <div class="d-flex flex-wrap gap-3">
-                <div class="form-check form-check-inline d-flex align-items-center">
-                  <input class="form-check-input me-2" type="radio" name="paymentMethod" id="cardVisa">
-                  <label class="form-check-label d-flex align-items-center gap-2" for="cardVisa">
-                    <span class="p-2 rounded-3 bg-white border d-inline-flex align-items-center justify-content-center">
-                      <i class="bi bi-credit-card-2-front"></i>
-                    </span>
-                    Visa
-                  </label>
+              <div class="d-flex flex-wrap gap-3 bg-secondary p-3 rounded" style="width: fit-content;"> <!-- Añado un container, con las esquinas redondas y el fit-content hace que el container se adapte hasta el ultimo logo-->
+                <div class="form-check form-check-inline d-flex align-items-center">  <!-- Añado d-flex align-items-center para que el input y el icono se alineen verticalmente -->
+                  <input class="form-check-input me-2" type="radio" name="paymentMethod" id="cardMastercard" > 
+                      <i class="fa-brands fa-cc-mastercard fa-2x" aria-hidden="true"></i> <!-- me-2 añade un margen a la derecha del input para separar el icono y con el Font Awesome añado los logos correspondiente al ejercicios -->
                 </div>
 
                 <div class="form-check form-check-inline d-flex align-items-center">
-                  <input class="form-check-input me-2" type="radio" name="paymentMethod" id="cardMastercard" checked>
-                  <label class="form-check-label d-flex align-items-center gap-2" for="cardMastercard">
-                    <span class="p-2 rounded-3 bg-white border d-inline-flex align-items-center justify-content-center">
-                      <i class="bi bi-credit-card"></i>
-                    </span>
-                    Mastercard
-                  </label>
+                  <input class="form-check-input me-2" type="radio" name="paymentMethod" id="cardVisa">
+                      <i class="fa-brands fa-cc-visa fa-2x" aria-hidden="true"></i>
+                </div>
+
+                <div class="form-check form-check-inline d-flex align-items-center">
+                  <input class="form-check-input me-2" type="radio" name="paymentMethod" id="carddinersClub">
+                      <i class="fa-brands fa-cc-diners-club fa-2x" aria-hidden="true"></i>
+
                 </div>
 
                 <div class="form-check form-check-inline d-flex align-items-center">
                   <input class="form-check-input me-2" type="radio" name="paymentMethod" id="cardPaypal">
-                  <label class="form-check-label d-flex align-items-center gap-2" for="cardPaypal">
-                    <span class="p-2 rounded-3 bg-white border d-inline-flex align-items-center justify-content-center">
-                      <i class="bi bi-paypal"></i>
-                    </span>
-                    PayPal
-                  </label>
-                </div>
-
-                <div class="form-check form-check-inline d-flex align-items-center">
-                  <input class="form-check-input me-2" type="radio" name="paymentMethod" id="cardAmex">
-                  <label class="form-check-label d-flex align-items-center gap-2" for="cardAmex">
-                    <span class="p-2 rounded-3 bg-white border d-inline-flex align-items-center justify-content-center">
-                      <i class="bi bi-credit-card-2-back"></i>
-                    </span>
-                    American Express
-                  </label>
+                      <i class="fa-brands fa-cc-paypal fa-2x" aria-hidden="true"></i>
                 </div>
               </div>
             </div>
